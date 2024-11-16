@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Formatter</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light">
+    <div class="container">
+        <h1>HTTP Header Formatter</h1>
+        <textarea id="headerInput" placeholder="Paste your headers here..."></textarea>
+        <select id="formatSelect">
+            <option value="python">Python (requests)</option>
+            <option value="nodejs">Node.js (axios)</option>
+            <option value="golang">Go (http.Client)</option>
+        </select>
+        <div>
+            <!-- Buttons with only icons, no background or outline -->
+            <button id="formatButton">
+                <i class="fa fa-play"></i>
+            </button>
+            <button id="copyButton">
+                <i class="fa fa-copy"></i>
+            </button>
+            <button id="themeToggleButton">
+                <i class="fa fa-sun"></i> <!-- Default sun icon for light theme -->
+            </button>
+        </div>
+        <pre id="output"></pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

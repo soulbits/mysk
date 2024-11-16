@@ -1,0 +1,187 @@
+/* Light Theme */
+body.light {
+    background-color: #f0f2f5; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+body.light .container {
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light textarea, 
+body.light select, 
+body.light button {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light pre {
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #181818; /* Dark background */
+    color: #f0f2f5; /* Light text color */
+}
+
+body.dark .container {
+    background: #222;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark textarea, 
+body.dark select, 
+body.dark button {
+    background-color: #333;
+    color: #f0f2f5;
+    border: 1px solid #555;
+}
+
+body.dark pre {
+    background: #333;
+    color: #f0f2f5;
+}
+
+/* General styling for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+    animation: fadeIn 1s ease-in-out;
+    text-align: left;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px; /* Set a reasonable default height */
+    max-height: 500px; /* Prevents the textarea from growing too large */
+    resize: vertical; /* Allow resizing vertically only */
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Prevents resizing from affecting layout */
+    transition: all 0.3s ease; /* Smooth transition for resize */
+    font-family: 'Arial', sans-serif; /* Make the font consistent */
+}
+
+
+select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f0f2f5;
+}
+
+/* Buttons Styling: Only Icons, No Background or Outline */
+button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular buttons */
+    background: transparent; /* No background */
+    border: none; /* No border */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #6c757d; /* Default icon color */
+    padding: 0; /* No padding */
+    outline: none; /* Remove outline */
+}
+
+/* Default icon sizes */
+button i {
+    font-size: 1.5rem; /* Adjust icon size */
+}
+
+/* Subtle colors for each button */
+#formatButton {
+    color: #4a90e2; /* Soft blue */
+}
+
+#copyButton {
+    color: #34b7a0; /* Soft green */
+}
+
+#themeToggleButton {
+    color: #f39c12; /* Soft orange */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#themeToggleButton:hover {
+    transform: scale(1.1);
+    color: #e67e22; /* Slightly darker orange on hover */
+}
+
+button:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    color: #007bff; /* Light blue on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+pre {
+    padding: 12px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes themeTransition {
+    0% {
+        background-color: #ffc107;
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        background-color: #f39c12;
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+        background-color: #e67e22;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Animation for theme toggle */
+body.theme-transition .container {
+    animation: themeTransition 2s ease-in-out infinite;
+}
